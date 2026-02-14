@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hexlet-code"
+version = "0.1.0"
+description = "Compares two configuration files and shows a difference."
+authors = [{name = "Your Name", email = "your@email.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+gendiff = "gendiff.scripts.gendiff:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["gendiff", "gendiff.scripts"]
