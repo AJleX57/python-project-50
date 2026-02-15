@@ -17,3 +17,6 @@ gendiff = "gendiff.scripts.gendiff:main"
 [tool.setuptools]
 package-dir = {"" = "."}
 packages = ["gendiff", "gendiff.scripts"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["gendiff"]
