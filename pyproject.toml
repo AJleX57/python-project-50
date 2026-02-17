@@ -12,11 +12,7 @@ requires-python = ">=3.8"
 dependencies = []
 
 [project.scripts]
-gendiff = "gendiff.scripts.gendiff:main"
+gendiff = "gendiff.cli:main"
 
 [tool.setuptools]
-package-dir = {"" = "."}
-packages = ["gendiff", "gendiff.scripts"]
-
-[tool.hatch.build.targets.wheel]
 packages = ["gendiff"]
