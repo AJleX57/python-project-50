@@ -1,0 +1,4 @@
+[flake8]
+max-line-length = 100
+exclude = .venv,__pycache__,dist,build,*.egg-info
+ignore = W503,E203

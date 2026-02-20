@@ -5,6 +5,10 @@ Summary: Compares two configuration files and shows a difference.
 Author-email: Your Name <your@email.com>
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: flake8>=5.0.0; extra == "dev"
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AJleX57/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AJleX57/python-project-50/actions)
