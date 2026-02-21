@@ -1,10 +1,10 @@
 import argparse
-import json
 import sys
 from gendiff import generate_diff
 
 
 def main():
+    """Main entry point for CLI."""
     parser = argparse.ArgumentParser(
         description='Compares two configuration files and shows a difference.'
     )
@@ -22,11 +22,9 @@ def main():
     except FileNotFoundError as e:
         print(f"Error: File not found - {e.filename}", file=sys.stderr)
         sys.exit(1)
-    except json.JSONDecodeError as e:
-        print(f"Error: Invalid JSON format - {e}", file=sys.stderr)
-        sys.exit(1)
+        
     except Exception as e:
-        print(f"Unexpected error: {e}", file=sys.stderr)
+        print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
 

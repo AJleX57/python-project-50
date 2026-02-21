@@ -1,8 +1,8 @@
 install:
-	uv pip install -e ".[dev]"
+	pip install -e ".[dev]"
 
 test:
-	pytest
+	pytest -v
 
 test-coverage:
 	pytest --cov=gendiff --cov-report=xml --cov-report=term
