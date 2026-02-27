@@ -4,7 +4,7 @@ from gendiff import generate_diff
 
 
 def main():
-    """Main entry point for CLI."""
+    
     parser = argparse.ArgumentParser(
         description='Compares two configuration files and shows a difference.'
     )
@@ -12,12 +12,12 @@ def main():
     parser.add_argument('second_file', type=str, help='second file')
     parser.add_argument('-f', '--format', type=str,
                         default='stylish',
-                        help='set format of output (default: stylish)')
+                        help='output format: stylish, plain, json (default: stylish)')
     
     args = parser.parse_args()
     
     try:
-        diff = generate_diff(args.first_file, args.second_file)
+        diff = generate_diff(args.first_file, args.second_file, args.format)
         print(diff)
     except FileNotFoundError as e:
         print(f"Error: File not found - {e.filename}", file=sys.stderr)
