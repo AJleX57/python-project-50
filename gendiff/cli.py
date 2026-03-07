@@ -4,7 +4,7 @@ from gendiff import generate_diff
 
 
 def main():
-    
+
     parser = argparse.ArgumentParser(
         description='Compares two configuration files and shows a difference.'
     )
@@ -22,7 +22,7 @@ def main():
     except FileNotFoundError as e:
         print(f"Error: File not found - {e.filename}", file=sys.stderr)
         sys.exit(1)
-        
+
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
