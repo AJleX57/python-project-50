@@ -1,4 +1,4 @@
-#!/home/alex_/projects/python-project-50/.venv/bin/python
+#!/home/alex_/projects/python-project-50/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

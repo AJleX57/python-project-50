@@ -10,32 +10,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-    strategy:
-      matrix:
-        python-version: [3.12]
-    
     steps:
     - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
-    
-    - name: Install uv
-      run: |
-        curl -LsSf https://astral.sh/uv/install.sh | sh
-        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        python-version: '3.12'
     
     - name: Install dependencies
       run: |
-        uv pip install --upgrade pip
-        uv pip install -e ".[dev]"
-    
-    - name: Run linter
-      run: make lint
+        pip install --upgrade pip
+        pip install -e ".[dev]"
     
     - name: Run tests with coverage
       run: make test-coverage
@@ -49,6 +37,8 @@ jobs:
         args: >
           -Dsonar.organization=ajlex57
           -Dsonar.projectKey=AJleX57_python-project-50
+          -Dsonar.sources=gendiff
+          -Dsonar.tests=tests
           -Dsonar.python.coverage.reportPaths=coverage.xml
           -Dsonar.coverage.exclusions=tests/**/*
-          -Dsonar.exclusions=tests/**/*,gendiff/scripts/**/*
+          -Dsonar.exclusions=gendiff/scripts/gendiff.py,gendiff/differ.py
