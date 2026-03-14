@@ -5,7 +5,7 @@ test:
 	pytest -v
 
 test-coverage:
-	pytest --cov=gendiff --cov-report=xml --cov-report=term
+	pytest --cov=gendiff --cov-report=xml:coverage.xml --cov-report=term
 
 test-nested:
 	pytest tests/test_gendiff_nested.py -v
