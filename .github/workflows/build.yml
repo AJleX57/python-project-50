@@ -40,7 +40,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=AJleX57
+          -Dsonar.organization=5786alex
           -Dsonar.projectKey=AJleX57_python-project-50
           -Dsonar.sources=gendiff
           -Dsonar.tests=tests
