@@ -11,11 +11,14 @@ test-nested:
 	pytest tests/test_gendiff_nested.py -v
 
 lint:
-	flake8 gendiff tests
+	ruff check .
 
 lint-fix:
-	autopep8 --in-place --recursive gendiff tests
+	ruff check . --fix
+
+format:
+	ruff format .
 
 check: test lint
 
-.PHONY: install test test-coverage test-nested lint lint-fix check
+.PHONY: install test test-coverage test-nested lint lint-fix format check

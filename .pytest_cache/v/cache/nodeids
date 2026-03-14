@@ -1,0 +1,15 @@
+[
+  "tests/test_gendiff.py::test_generate_diff[file1.json-file2.json]",
+  "tests/test_gendiff.py::test_generate_diff[file1.yaml-file2.yaml]",
+  "tests/test_gendiff.py::test_generate_diff[file1.yml-file2.yml]",
+  "tests/test_gendiff.py::test_generate_diff_mixed_formats",
+  "tests/test_gendiff.py::test_generate_diff_with_same_files",
+  "tests/test_gendiff_json.py::test_json_flat",
+  "tests/test_gendiff_json.py::test_json_nested",
+  "tests/test_gendiff_json.py::test_json_with_yaml",
+  "tests/test_gendiff_nested.py::test_generate_diff_nested[nested_file1.json-nested_file2.json]",
+  "tests/test_gendiff_nested.py::test_generate_diff_nested[nested_file1.yml-nested_file2.yml]",
+  "tests/test_gendiff_nested.py::test_generate_diff_nested_mixed_formats",
+  "tests/test_gendiff_plain.py::test_plain_flat",
+  "tests/test_gendiff_plain.py::test_plain_nested"
+]

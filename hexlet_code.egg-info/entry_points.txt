@@ -1,2 +1,2 @@
 [console_scripts]
-gendiff = gendiff.cli:main
+gendiff = gendiff.scripts.cli:main

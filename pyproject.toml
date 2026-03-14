@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "hexlet-code"
 version = "0.1.0"
 description = "Compares two configuration files and shows a difference."
-authors = [{name = "Your Name", email = "your@email.com"}]
+authors = [{name = "AJleX57", email = "s.alex06.a@gmail.com"}]
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
@@ -14,14 +14,13 @@ dependencies = [
 ]
 
 [project.scripts]
-gendiff = "gendiff.cli:main"
+gendiff = "gendiff.scripts.cli:main"
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
-    "flake8>=5.0.0",
-    "autopep8>=2.0.0"
+    "ruff>=0.1.0"
 ]
 
 [tool.setuptools]
