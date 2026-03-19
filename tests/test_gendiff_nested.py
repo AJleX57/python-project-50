@@ -2,6 +2,7 @@ import os
 import pytest
 from gendiff import generate_diff
 
+
 def get_fixture_path(file_name):
     current_dir = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(current_dir, 'test_data', file_name)

@@ -35,7 +35,10 @@ def iter_plain(diff, path_parts):
         elif type_ == 'changed':
             old_val = stringify(node['old_value'])
             new_val = stringify(node['new_value'])
-            lines.append(f"Property '{full_path}' was updated. From {old_val} to {new_val}")
+            lines.append(
+                f"Property '{full_path}' was updated."
+                f" From {old_val} to {new_val}"
+                )
     
     return lines
 
