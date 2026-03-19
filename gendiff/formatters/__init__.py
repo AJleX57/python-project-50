@@ -12,3 +12,6 @@ def apply_format(diff, format_name):
         return format_json(diff)
     else:
         raise ValueError(f"Unknown format: {format_name}")
+
+
+__all__ = ('apply_format', 'format_stylish', 'format_plain', 'format_json')
