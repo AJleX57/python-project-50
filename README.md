@@ -17,13 +17,13 @@
 ## Демонстрация работы
 
 ### Stylish формат (по умолчанию)
-[![asciicast](https://asciinema.org/a/xdvoYjy4fbSH7Ygr.svg)](https://asciinema.org/a/xdvoYjy4fbSH7Ygr)
+[![asciicast]( https://asciinema.org/a/Y7ASypXfQlUBlAUT.svg)](https://asciinema.org/a/Y7ASypXfQlUBlAUT)
 
 ### Plain формат
-[![asciicast](https://asciinema.org/a/SkJ9GzW3LkZIoAwQ.svg)](https://asciinema.org/a/SkJ9GzW3LkZIoAwQ)
+[![asciicast](https://asciinema.org/a/GIE5WWtbo62sGjpf.svg)](https://asciinema.org/a/GIE5WWtbo62sGjpf)
 
 ### JSON формат
-[![asciicast](https://asciinema.org/a/C6vVHJS0EAZpP550.svg)](https://asciinema.org/a/C6vVHJS0EAZpP550)
+[![asciicast](https://asciinema.org/a/9ZodlJEfw9q2LOA8.svg)](https://asciinema.org/a/9ZodlJEfw9q2LOA8)
 
 
 ## Установка
