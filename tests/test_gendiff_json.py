@@ -16,9 +16,9 @@ def read_file(file_path):
 def test_json_nested():
     file1 = get_fixture_path('nested_file1.json')
     file2 = get_fixture_path('nested_file2.json')
-    
+
     result = generate_diff(file1, file2, 'json')
-    
+
     # Проверяем, что результат - валидный JSON
     parsed = json.loads(result)
     assert isinstance(parsed, list)
@@ -28,12 +28,12 @@ def test_json_nested():
 def test_json_flat():
     file1 = get_fixture_path('file1.json')
     file2 = get_fixture_path('file2.json')
-    
+
     result = generate_diff(file1, file2, 'json')
-    
+
     parsed = json.loads(result)
     assert isinstance(parsed, list)
-    
+
     # Проверяем структуру для плоских файлов
     for item in parsed:
         assert 'key' in item
@@ -43,8 +43,8 @@ def test_json_flat():
 def test_json_with_yaml():
     file1 = get_fixture_path('nested_file1.yml')
     file2 = get_fixture_path('nested_file2.yml')
-    
+
     result = generate_diff(file1, file2, 'json')
-    
+
     parsed = json.loads(result)
     assert isinstance(parsed, list)

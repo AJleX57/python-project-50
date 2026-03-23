@@ -1,7 +1,7 @@
 def build_diff(data1, data2):
     keys = sorted(set(data1.keys()) | set(data2.keys()))
     result = []
-    
+
     for key in keys:
         if key not in data1:
             result.append({
@@ -37,7 +37,7 @@ def build_diff(data1, data2):
                 'old_value': data1[key],
                 'new_value': data2[key]
             })
-    
+
     # СОРТИРУЕМ ВЕРХНИЙ УРОВЕНЬ
     result.sort(key=lambda x: x['key'])
     return result

@@ -18,13 +18,13 @@ def build_path(parts):
 def iter_plain(diff, path_parts):
     lines = []
     sorted_diff = sorted(diff, key=lambda x: x['key'])
-    
+
     for node in sorted_diff:
         key = node['key']
         type_ = node['type']
         current_path = path_parts + [key]
         full_path = build_path(current_path)
-        
+
         if type_ == 'nested':
             lines.extend(iter_plain(node['children'], current_path))
         elif type_ == 'added':
@@ -39,7 +39,7 @@ def iter_plain(diff, path_parts):
                 f"Property '{full_path}' was updated."
                 f" From {old_val} to {new_val}"
                 )
-    
+
     return lines
 
 

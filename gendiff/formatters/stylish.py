@@ -19,14 +19,14 @@ def format_value(value, depth):
 def iter_(diff, depth):
     lines = []
     indent = '    ' * depth
-    
+
     # СОРТИРУЕМ УЗЛЫ ПЕРЕД ВЫВОДОМ
     sorted_diff = sorted(diff, key=lambda x: x['key'])
-    
+
     for node in sorted_diff:
         key = node['key']
         type_ = node['type']
-        
+
         if type_ == 'nested':
             # СОРТИРУЕМ ДЕТЕЙ ТОЖЕ
             sorted_children = sorted(node['children'], key=lambda x: x['key'])
@@ -48,7 +48,7 @@ def iter_(diff, depth):
             new_val = format_value(node['new_value'], depth + 1)
             lines.append(f'{indent}  - {key}: {old_val}')
             lines.append(f'{indent}  + {key}: {new_val}')
-    
+
     return lines
 
 
